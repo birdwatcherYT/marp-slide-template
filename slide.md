@@ -9,6 +9,8 @@ style: @import "style.css"
 
 <!-- タイトルのみページ番号スキップ -->
 <!-- _paginate: skip -->
+<!-- 中央寄せ -->
+<!-- _class: vertical-center -->
 # タイトル
 ## サブタイトル
 ### 名前
@@ -89,7 +91,6 @@ $$
 
 ---
 
-
 ## コード
 
 ```c++
@@ -128,3 +129,9 @@ int main() {
 | あ | い | う |
 
 </div>
+
+---
+
+<!-- _class: vertical-center -->
+
+# 中央寄せメッセージ

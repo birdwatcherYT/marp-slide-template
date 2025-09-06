@@ -1,3 +1,14 @@
+/* ベースを上寄せに */
+section {
+    align-content: start !important;
+}
+
+/* 中央寄せ */
+section.vertical-center {
+    align-content: center !important;
+    padding-top: 0;
+}
+
 /* ページの分数表示 */
 section::after {
     content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total) !important;
@@ -125,4 +136,11 @@ section::after {
 
 .huge {
     font-size: 1.5em;
+}
+
+.align-content-top {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
