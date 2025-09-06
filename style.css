@@ -137,10 +137,3 @@ section::after {
 .huge {
     font-size: 1.5em;
 }
-
-.align-content-top {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
