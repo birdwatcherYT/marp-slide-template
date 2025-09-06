@@ -17,6 +17,9 @@ jobs:
     # 実行環境として最新のUbuntuを指定
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     # ジョブのステップ
     steps:
       # 1. リポジトリのコードをチェックアウトする
