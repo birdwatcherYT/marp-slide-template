@@ -1,4 +1,6 @@
 # marpスライドテンプレート
+- [プレビュー](https://birdwatcheryt.github.io/marp-slide-template/)
+- Github Actionsによるindex.html自動更新ワークフロー
 
 ## スライドの生成方法
 ```
