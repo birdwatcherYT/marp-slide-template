@@ -135,5 +135,3 @@ int main() {
 <!-- _class: vertical-center -->
 
 # 中央寄せメッセージ
-
----

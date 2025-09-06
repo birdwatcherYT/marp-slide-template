@@ -2,7 +2,7 @@
 TARGET ?= slide.md
 
 .DEFAULT_GOAL := help
-.PHONY: all pdf html docs preview help
+.PHONY: all pdf html index preview help
 
 all: pdf html
 
@@ -16,8 +16,8 @@ pdf:
 html:
 	npx @marp-team/marp-cli $(TARGET) --html -o $(TARGET:.md=.html) --allow-local-files
 
-docs:
-	npx @marp-team/marp-cli $(TARGET) --html -o docs/index.html --allow-local-files
+index:
+	npx @marp-team/marp-cli $(TARGET) --html -o index.html --allow-local-files
 
 # プレビューするターゲット
 # make preview TARGET=another_slide.md のように実行できる
@@ -28,7 +28,7 @@ help:
 	@echo "使い方:"
 	@echo "  make pdf                           $(TARGET) をPDFに変換"
 	@echo "  make html                          $(TARGET) をHTMLに変換"
-	@echo "  make docs                        $(TARGET) をHTMLに変換しdocs/index.htmlに反映"
+	@echo "  make index                         $(TARGET) をHTMLに変換しindex.htmlに反映"
 	@echo "  make preview                       $(TARGET) をプレビュー"
 	@echo "  make all                           $(TARGET) をPDFとHTMLに変換"
 	@echo "  make <command> TARGET=<ファイル名> 任意のファイルを変換"
