@@ -24,7 +24,6 @@ jobs:
         with:
           node-version: "20"
 
-      # --input-dir も、ルートで完結するため不要
       - name: Build slide with Marp CLI
         run: make index
 
