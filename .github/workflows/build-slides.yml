@@ -1,51 +1,35 @@
 name: Build and Deploy Marp Slides
 
-# ワークフローが実行されるトリガー
 on:
   push:
     branches:
-      - main # mainブランチへの直接プッシュ、またはPRのマージで実行
+      - main
 
-# ジョブの並列実行をキャンセルする設定
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-# 実行されるジョブ
 jobs:
   build-and-deploy:
-    # 実行環境として最新のUbuntuを指定
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
 
-    # ジョブのステップ
     steps:
-      # 1. リポジトリのコードをチェックアウトする
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Node.jsの環境をセットアップする
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      # 3. docsフォルダを作成する
-      - name: Create docs directory if it does not exist
-        run: mkdir -p docs
-
-      # 4. Marp CLIでHTMLに変換する
+      # --input-dir も、ルートで完結するため不要
       - name: Build slide with Marp CLI
-        run: make docs
+        run: make index
 
-      # 5. 変更があった場合、自動でコミット＆プッシュする
       - name: Commit & Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          # コミットメッセージ。"[skip ci]"が含まれるため無限ループしない
           commit_message: "docs: Build and update slide HTML [skip ci]"
-
-          # コミット対象のファイルパターン
-          file_pattern: "docs/index.html"
+          file_pattern: "index.html"
