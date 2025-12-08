@@ -9,12 +9,12 @@
 
 ## プレビュー
 
-| クエリパラメータ | モード | 動作 |
+| クエリパラメータ | プレビュー | 補足 |
 | --- | --- | --- |
-| （なし） | [非表示](https://birdwatcheryt.github.io/marp-slide-template/) | 何も表示されません。 |
-| `?clock` | [時計](https://birdwatcheryt.github.io/marp-slide-template/?clock) | リアルタイムで HH:MM:SS を表示します。 |
-| `?timer` | [カウントアップ](https://birdwatcheryt.github.io/marp-slide-template/?timer) | 00:00から経過時間を計測します。 |
-| `?timer=5` | [カウントダウン](https://birdwatcheryt.github.io/marp-slide-template/?timer=5) | 5分00秒からカウントダウンします。（`?timer=5.5`で5分30秒） |
+| （なし） | [通常のスライド表示](https://birdwatcheryt.github.io/marp-slide-template/) | |
+| `?clock` | [時計付き](https://birdwatcheryt.github.io/marp-slide-template/?clock) | |
+| `?timer` | [経過時間付き](https://birdwatcheryt.github.io/marp-slide-template/?timer) | |
+| `?timer=5` | [カウントダウンタイマー付き](https://birdwatcheryt.github.io/marp-slide-template/?timer=5) | `?timer=10`で10分、`?timer=5.5`で5分30秒など |
 
 
 ## スライドの生成方法
