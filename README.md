@@ -9,8 +9,8 @@
 
 ## プレビュー
 
-| クエリパラメータ | モード | 動作 | 
-| --- | --- | --- | 
+| クエリパラメータ | モード | 動作 |
+| --- | --- | --- |
 | （なし） | [非表示](https://birdwatcheryt.github.io/marp-slide-template/) | 何も表示されません。 |
 | `?clock` | [時計](https://birdwatcheryt.github.io/marp-slide-template/?clock) | リアルタイムで HH:MM:SS を表示します。 |
 | `?timer` | [カウントアップ](https://birdwatcheryt.github.io/marp-slide-template/?timer) | 00:00から経過時間を計測します。 |
