@@ -137,3 +137,14 @@ section::after {
 .huge {
     font-size: 1.5em;
 }
+
+/* スライド内時計/タイマーのスタイル */
+.slide-clock {
+    position: absolute;     /* スライド(section)を基準に配置 */
+    top: 21px;              /* ヘッダーと同じくらいの高さ */
+    right: 30px;            /* 右端からの距離 */
+    font-size: 18px;        /* ヘッダーの文字サイズに合わせる */
+    color: gray;          /* 目立ちすぎない色 */
+    font-family: monospace; /* 数字の幅を揃える（お好みで） */
+    z-index: 10;            /* コンテンツより手前に */
+}
