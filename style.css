@@ -9,6 +9,20 @@ section.vertical-center {
     padding-top: 0;
 }
 
+/* ページ番号の左にロゴ画像を表示（ページ番号が出るスライドのみ） */
+section[data-marpit-pagination]::before {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    right: 110px;
+    width: 128px;
+    height: 26px;
+    background-image: url('fig/js0.svg'), url('fig/js1.svg'), url('fig/js2.svg'), url('fig/js3.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 0 center, 32px center, 64px center, 96px center;
+    background-size: auto 26px, auto 26px, auto 26px, auto 26px;
+}
+
 /* ページの分数表示 */
 section::after {
     content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total) !important;
@@ -124,6 +138,12 @@ section::after {
 
 .tiny {
     font-size: 0.6em;
+}
+
+.tiny table td,
+.tiny table th {
+    padding: 0.1em 0.3em;
+    line-height: 1.2;
 }
 
 .small {
